@@ -29,5 +29,28 @@ namespace Practica1
                 DisplayAlert("Mensaje", "Bienvenido " + EntUserName.Text , "Ok");
             }
         }
+
+        private void SignUp_Clicked(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(NewEmail.Text) || string.IsNullOrEmpty(NewUser.Text) || string.IsNullOrEmpty(NewPass.Text) || string.IsNullOrEmpty(ConfirmPass.Text))
+            {
+                DisplayAlert("Mensaje", "Campos Vacios", "Ok");                
+            }
+            else
+            {
+                if (ConfirmPass.Text != NewPass.Text)
+                {
+                    DisplayAlert("Mensaje", "La contraseña no coincide", "Ok");
+                }
+                else
+                {
+                    DisplayAlert("Bienvenido", "Registrado " + NewUser.Text, "Ok");
+                    NewPass.Text = string.Empty;
+                    NewEmail.Text = string.Empty;
+                    NewUser.Text = string.Empty;
+                    ConfirmPass.Text = string.Empty;
+                }                
+            }
+        }
     }
 }

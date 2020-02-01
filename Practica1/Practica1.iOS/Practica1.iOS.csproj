@@ -147,4 +147,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\usermale.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\camera.png" />
+  </ItemGroup>
 </Project>

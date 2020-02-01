@@ -49,7 +49,38 @@
 
     <ContentPage Title="Sign Up">
         <StackLayout>
-            <Image Source="usermale.png" />
+            <ScrollView>
+                <StackLayout Padding="20" Spacing="20">
+                    <Image Aspect="AspectFit" Source="camera.png" />
+                    <StackLayout Padding="25" Spacing="25">
+                        <Entry x:Name="NewEmail" Placeholder="Email address" />
+                        <Entry x:Name="NewUser" Placeholder="Username" />
+                        <Entry
+                            x:Name="NewPass"
+                            IsPassword="True"
+                            Placeholder="Password" />
+                        <Entry
+                            x:Name="ConfirmPass"
+                            IsPassword="True"
+                            Placeholder="Password" />
+                        <Frame
+                            Padding="0"
+                            BorderColor="#FFFFFF"
+                            CornerRadius="25"
+                            HasShadow="True">
+                            <Button
+                                x:Name="SignUp"
+                                BackgroundColor="#FFFFFF"
+                                Clicked="SignUp_Clicked"
+                                CornerRadius="25"
+                                ImageSource="Done.png"
+                                Text="Sign Up"
+                                TextColor="#000000" />
+                        </Frame>
+                        <Label HorizontalOptions="CenterAndExpand" Text="Terms of Services" />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
         </StackLayout>
     </ContentPage>
 
