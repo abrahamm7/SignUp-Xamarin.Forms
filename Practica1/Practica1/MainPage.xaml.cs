@@ -27,6 +27,8 @@ namespace Practica1
             else
             {
                 DisplayAlert("Mensaje", "Bienvenido " + EntUserName.Text , "Ok");
+                EntUserName.Text = string.Empty;
+                EntPass.Text = string.Empty;
             }
         }
 
