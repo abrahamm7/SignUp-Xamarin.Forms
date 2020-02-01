@@ -6,16 +6,19 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-   
+
     <ContentPage Title="Log In">
         <StackLayout>
-            
+            <Image Aspect="AspectFit" Source="usermale.png" />
+            <Entry Placeholder="Username or email address" />
+            <Entry Placeholder="Password" />
+            <Button Text="Log in" />
         </StackLayout>
     </ContentPage>
-    
+
     <ContentPage Title="Sign Up">
         <StackLayout>
-            
+            <Image Aspect="AspectFit" Source="usermale.png" />
         </StackLayout>
     </ContentPage>
 
