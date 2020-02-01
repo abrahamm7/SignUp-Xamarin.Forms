@@ -17,5 +17,17 @@ namespace Practica1
         {
             InitializeComponent();
         }
+
+        private void LoginBtn_Clicked(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(EntUserName.Text) || string.IsNullOrEmpty(EntPass.Text))
+            {
+                DisplayAlert("Mensaje","Campos Vacios","Ok");
+            }
+            else
+            {
+                DisplayAlert("Mensaje", "Bienvenido " + EntUserName.Text , "Ok");
+            }
+        }
     }
 }

@@ -9,35 +9,42 @@
     mc:Ignorable="d">
 
     <ContentPage Title="Log In">
-        <StackLayout Padding="20" Spacing="20">
-            <Image Aspect="AspectFit" Source="usermale.png" />
-            <StackLayout Padding="25" Spacing="25">
-                <Entry Placeholder="Username or email address" />
-                <Entry Placeholder="Password" />
-                <Frame
-                    Padding="0"
-                    BorderColor="#FFFFFF"
-                    CornerRadius="25"
-                    HasShadow="True">
-                    <Button
-                        BackgroundColor="#FFFFFF"
+        <ScrollView>
+            <StackLayout Padding="20" Spacing="20">
+                <Image Aspect="AspectFit" Source="usermale.png" />
+                <StackLayout Padding="25" Spacing="25">
+                    <Entry x:Name="EntUserName" Placeholder="Username or email address" />
+                    <Entry
+                        x:Name="EntPass"
+                        IsPassword="True"
+                        Placeholder="Password" />
+                    <Frame
+                        Padding="0"
+                        BorderColor="#FFFFFF"
                         CornerRadius="25"
-                        ImageSource="Done.png"
-                        Text="Log in"
-                        TextColor="#000000" />
-                </Frame>
-                <Label HorizontalOptions="CenterAndExpand" Text="Login with" />
-                <StackLayout
-                    HorizontalOptions="CenterAndExpand"
-                    Orientation="Horizontal"
-                    Spacing="20">
-                    <Image Source="facebook.png" />
-                    <Image Source="github.png" />
-                    <Image Source="twitter.png" />
-                    <Image Source="google.png" />
+                        HasShadow="True">
+                        <Button
+                            x:Name="LoginBtn"
+                            BackgroundColor="#FFFFFF"
+                            Clicked="LoginBtn_Clicked"
+                            CornerRadius="25"
+                            ImageSource="Done.png"
+                            Text="Log in"
+                            TextColor="#000000" />
+                    </Frame>
+                    <Label HorizontalOptions="CenterAndExpand" Text="Login with" />
+                    <StackLayout
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal"
+                        Spacing="20">
+                        <Image Source="facebook.png" />
+                        <Image Source="github.png" />
+                        <Image Source="twitter.png" />
+                        <Image Source="google.png" />
+                    </StackLayout>
                 </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage>
 
     <ContentPage Title="Sign Up">
