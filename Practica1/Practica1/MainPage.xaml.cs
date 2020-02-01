@@ -18,7 +18,7 @@ namespace Practica1
             InitializeComponent();
         }
 
-        private void LoginBtn_Clicked(object sender, EventArgs e)
+        private void LoginBtn_Clicked(object sender, EventArgs e) //Evento de boton Log in click//
         {
             if(string.IsNullOrEmpty(EntUserName.Text) || string.IsNullOrEmpty(EntPass.Text))
             {
@@ -32,7 +32,7 @@ namespace Practica1
             }
         }
 
-        private void SignUp_Clicked(object sender, EventArgs e)
+        private void SignUp_Clicked(object sender, EventArgs e)  //Evento de boton Sign Up click//
         {
             if (string.IsNullOrEmpty(NewEmail.Text) || string.IsNullOrEmpty(NewUser.Text) || string.IsNullOrEmpty(NewPass.Text) || string.IsNullOrEmpty(ConfirmPass.Text))
             {
